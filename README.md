@@ -33,3 +33,4 @@ Theme CSS and brand artwork were copied from the supplied website package; origi
 Lucide icons include their license in `assets/icons/lucide/LICENSE`.
 Facebook and Instagram artwork came from the supplied SVG Repo assets; TikTok is a music-note crop of the supplied SVG Repo artwork.
 The WhatsApp icon came from Simple Icons. Brand marks remain subject to their respective owners’ rights.
+# hlh-wwco
