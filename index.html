@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Wags &amp; Whiskers Co.</title>
+    <meta name="description" content="Welcome to The Wags &amp; Whiskers Co.">
+    <link rel="icon" type="image/png" href="assets/brand/favicon.png">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/contact-popups.css">
+    <script src="assets/js/contact-popups.js" defer></script>
+    <link rel="stylesheet" href="assets/css/landing.css">
+  </head>
+  <body class="landing-page">
+    <svg width="0" height="0" aria-hidden="true" focusable="false" style="position: absolute;">
+      <defs>
+        <filter id="logo-edge-clarity" color-interpolation-filters="sRGB">
+          <feComponentTransfer>
+            <feFuncA type="linear" slope="1.5" intercept="-0.25"/>
+          </feComponentTransfer>
+        </filter>
+      </defs>
+    </svg>
+    <main class="landing-hero" aria-label="Welcome to The Wags &amp; Whiskers Co.">
+      <img class="landing-hero__corner-whiskers" src="assets/brand/whiskers.svg" alt="" aria-hidden="true" width="122" height="33">
+      <div class="landing-hero__content">
+        <img class="landing-hero__logo" src="assets/brand/logo.png"
+          alt="The Wags &amp; Whiskers Co." width="500" height="500">
+        <div class="landing-hero__contact" aria-label="Contact us">
+          <button class="contact-icon" type="button" data-contact="phone" aria-label="Call us" aria-expanded="false" aria-controls="contact-popup" aria-haspopup="dialog">
+            <img src="assets/icons/lucide/phone.svg" width="22" height="22" alt="">
+            <span class="contact-icon__label">Call us</span>
+          </button>
+          <button class="contact-icon" type="button" data-contact="whatsapp" aria-label="WhatsApp" aria-expanded="false" aria-controls="contact-popup" aria-haspopup="dialog">
+            <img src="assets/icons/socials/whatsapp.svg" width="21" height="21" alt="">
+            <span class="contact-icon__label">WhatsApp</span>
+          </button>
+          <button class="contact-icon" type="button" data-contact="email" aria-label="Email us" aria-expanded="false" aria-controls="contact-popup" aria-haspopup="dialog">
+            <img src="assets/icons/lucide/mail.svg" width="22" height="22" alt="">
+            <span class="contact-icon__label">Email us</span>
+          </button>
+          <button class="contact-icon" type="button" data-contact="facebook" aria-label="Facebook" aria-expanded="false" aria-controls="contact-popup" aria-haspopup="dialog">
+            <img src="assets/icons/socials/facebook.svg" width="20" height="20" alt="">
+            <span class="contact-icon__label">Facebook</span>
+          </button>
+          <button class="contact-icon" type="button" data-contact="instagram" aria-label="Instagram" aria-expanded="false" aria-controls="contact-popup" aria-haspopup="dialog">
+            <img src="assets/icons/socials/instagram.svg" width="20" height="20" alt="">
+            <span class="contact-icon__label">Instagram</span>
+          </button>
+          <button class="contact-icon" type="button" data-contact="tiktok" aria-label="TikTok" aria-expanded="false" aria-controls="contact-popup" aria-haspopup="dialog">
+            <img src="assets/icons/socials/tiktok.svg" width="22" height="22" alt="">
+            <span class="contact-icon__label">TikTok</span>
+          </button>
+        </div>
+        <p class="landing-hero__coming-soon">Website Coming Soon</p>
+      </div>
+    </main>
+    <aside id="contact-popup" class="pet-popup" data-animal="cat" role="dialog" aria-labelledby="contact-popup-title" hidden>
+      <svg class="pet-popup__shape pet-popup__shape--cat" viewBox="0 0 320 260" aria-hidden="true">
+        <path fill="#fff" d="M38 95 30 12Q30 2 40 8L110 48Q160 32 210 48L280 8Q290 2 290 12L282 95Q310 120 300 174Q290 246 160 250Q30 246 20 174Q10 120 38 95Z"/>
+        <g fill="none" stroke="#8EAE91" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m49 62-3-29 32 23m164 0 32-23-3 29M112 88q8-10 16 0m64 0q8-10 16 0m-56 7 8 6 8-6zM160 101v6m-77-6-24-6m24 16-24 4m178-14 24-6m-24 16 24 4"/>
+        </g>
+      </svg>
+      <svg class="pet-popup__shape pet-popup__shape--dog" viewBox="0 0 320 260" aria-hidden="true">
+        <path fill="#fff" d="M66 58Q24 18 12 80L4 143Q0 178 28 181L51 160Q49 243 160 250Q271 243 269 160L292 181Q320 178 316 143L308 80Q296 18 254 58Q218 25 160 28Q102 25 66 58Z"/>
+        <g fill="none" stroke="#8EAE91" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M66 62 50 138m204-76 16 76M111 85q8-10 16 0m66 0q8-10 16 0m-58 8q9-6 18 0l-9 9zM160 102v6q-7 9-15 0m15 0q7 9 15 0"/>
+        </g>
+      </svg>
+      <button class="pet-popup__close" type="button" aria-label="Close contact pop-up">
+        <img src="assets/icons/lucide/x.svg" width="18" height="18" alt="">
+      </button>
+      <div class="pet-popup__content">
+        <h2 id="contact-popup-title">Call us</h2>
+        <p id="contact-popup-detail">Details coming soon</p>
+        <a id="contact-popup-link" hidden></a>
+      </div>
+    </aside>
+  </body>
+</html>

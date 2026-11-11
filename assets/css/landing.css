@@ -1,0 +1,59 @@
+      body.landing-page {
+        margin: 0;
+        background: var(--color-white);
+        color: var(--color-white);
+        padding: clamp(20px, 4vw, 56px);
+      }
+
+      .landing-hero {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        place-items: center;
+        min-height: calc(100vh - 2 * clamp(20px, 4vw, 56px));
+        min-height: calc(100svh - 2 * clamp(20px, 4vw, 56px));
+        padding: 24px;
+        background: var(--color-sage);
+      }
+
+      .landing-hero__content {
+        min-width: 0;
+        width: min(500px, 100%);
+        text-align: center;
+      }
+
+      .landing-hero__corner-whiskers {
+        position: absolute;
+        top: clamp(48px, 6vw, 80px);
+        left: clamp(12px, 2vw, 32px);
+        width: clamp(100px, 14vw, 180px);
+        height: auto;
+        transform: rotate(-45deg);
+        pointer-events: none;
+      }
+
+      .landing-hero__logo {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: -18%;
+        /* Improve the existing PNG's soft alpha edges without changing its artwork. */
+        filter: brightness(0) invert(1) url(#logo-edge-clarity);
+      }
+
+      .landing-hero__contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(5px, 1.5vw, 20px);
+        margin-top: 24px;
+        font-size: clamp(11px, 2.8vw, 14px);
+        white-space: nowrap;
+      }
+
+      .landing-hero__coming-soon {
+        margin: 24px 0 0;
+        color: var(--color-white);
+        font-size: 14px;
+        letter-spacing: 0.08em;
+      }

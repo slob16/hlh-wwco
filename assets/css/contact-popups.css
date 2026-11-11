@@ -1,0 +1,82 @@
+.contact-icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: 0 1 44px;
+  min-width: 32px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.contact-icon > img {
+  display: block;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+.contact-icon:hover,
+.contact-icon[aria-expanded="true"] { background: rgba(255, 255, 255, 0.16); }
+.contact-icon:focus-visible { outline: 2px solid white; outline-offset: 3px; }
+
+.contact-icon__label {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: var(--color-dark);
+  color: white;
+  font-size: 11px;
+  line-height: 20px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+}
+.contact-icon:hover .contact-icon__label,
+.contact-icon:focus-visible .contact-icon__label { opacity: 1; }
+
+.pet-popup {
+  position: fixed;
+  z-index: 10;
+  right: clamp(20px, 4vw, 56px);
+  bottom: clamp(20px, 4vw, 56px);
+  width: min(320px, calc(100vw - 40px));
+  aspect-ratio: 320 / 260;
+  color: var(--color-dark);
+  filter: drop-shadow(0 8px 18px rgba(49, 49, 45, 0.16));
+}
+.pet-popup[hidden], .pet-popup [hidden] { display: none; }
+.pet-popup__shape { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.pet-popup[data-animal="cat"] .pet-popup__shape--dog,
+.pet-popup[data-animal="dog"] .pet-popup__shape--cat { display: none; }
+
+.pet-popup__close {
+  position: absolute;
+  top: 18%;
+  left: calc(50% - 16px);
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.pet-popup__close:hover { background: var(--color-soft-white); }
+.pet-popup__close:focus-visible,
+#contact-popup-link:focus-visible { outline: 2px solid var(--color-dark); outline-offset: 3px; }
+.pet-popup__content { position: absolute; top: 47%; left: 16%; right: 16%; text-align: center; }
+#contact-popup-title { margin: 0 0 6px; color: var(--color-dark); font: 600 18px/1.4 'Open Sans', sans-serif; letter-spacing: 0; text-transform: none; }
+#contact-popup-detail { margin: 0 0 8px; font-size: 12px; line-height: 1.5; overflow-wrap: anywhere; }
+#contact-popup-link { display: inline-block; color: var(--color-dark); text-decoration: underline; text-underline-offset: 4px; font-size: 13px; line-height: 1.5; }
+#contact-popup-link[hidden] { display: none; }
+
+@media (max-width: 380px) {
+  .landing-hero__contact { gap: 0; }
+}
