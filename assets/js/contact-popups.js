@@ -1,12 +1,12 @@
 // Contact and social destinations for the landing page.
 // Use tel:+44… for phone, mailto:… for email, and full https:// social URLs.
 const contactDetails = {
-  phone: { title: 'Call us', animal: 'dog', href: 'tel:+447527047284', detail: '07527 047284', action: 'Call us' },
-  whatsapp: { title: 'WhatsApp', animal: 'dog', href: 'https://wa.me/447527047284', detail: '07527 047284', action: 'Open WhatsApp' },
-  email: { title: 'Email us', animal: 'cat', href: 'mailto:thewagsandwhiskersco@outlook.com', detail: 'thewagsandwhiskersco@outlook.com', action: 'Send an email' },
-  facebook: { title: 'Facebook', animal: 'dog', href: 'https://www.facebook.com/p/The-Wags-Whiskers-Co-61575142536513/', detail: '', action: 'Visit Facebook' },
-  instagram: { title: 'Instagram', animal: 'cat', href: 'https://www.instagram.com/thewagsandwhiskersco/', detail: '', action: 'Visit Instagram' },
-  tiktok: { title: 'TikTok', animal: 'dog', href: 'https://www.tiktok.com/@thewagsandwhiskersco/', detail: '', action: 'Visit TikTok' }
+  phone: { title: 'Call Hannah', href: 'tel:+447527047284', detail: '07527 047284', action: 'Call Hannah' },
+  whatsapp: { title: 'WhatsApp', href: 'https://wa.me/447527047284', detail: '07527 047284', action: 'Open WhatsApp' },
+  email: { title: 'Email us', href: 'mailto:thewagsandwhiskersco@outlook.com', detail: 'thewagsandwhiskersco@outlook.com', action: 'Send an email' },
+  facebook: { title: 'Facebook', href: 'https://www.facebook.com/p/The-Wags-Whiskers-Co-61575142536513/', detail: '', action: 'Visit Facebook' },
+  instagram: { title: 'Instagram', href: 'https://www.instagram.com/thewagsandwhiskersco/', detail: '', action: 'Visit Instagram' },
+  tiktok: { title: 'TikTok', href: 'https://www.tiktok.com/@thewagsandwhiskersco/', detail: '', action: 'Visit TikTok' }
 };
 
 const popup = document.getElementById('contact-popup');
@@ -35,7 +35,6 @@ contactButtons.forEach((button) => {
     closeContactPopup(false);
     const contact = contactDetails[button.dataset.contact];
     activeTrigger = button;
-    popup.dataset.animal = contact.animal;
     popupTitle.textContent = contact.title;
     popupDetail.textContent = (contact.detail || (contact.href ? '' : 'Details coming soon')).replace('@', '\u200b@');
     popupDetail.hidden = !popupDetail.textContent;
