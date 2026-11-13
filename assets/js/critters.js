@@ -12,9 +12,10 @@
   const random = (min, max) => min + Math.random() * (max - min);
 
   async function visit() {
-    root.classList.add('is-active');
+    const rise = art.animate([down, up], { duration: 800, easing: 'ease-out', fill: 'forwards' });
+    root.classList.add('is-active'); // only once the rise has started from below the edge
     try {
-      await art.animate([down, up], { duration: 800, easing: 'ease-out', fill: 'forwards' }).finished;
+      await rise.finished;
       await wait(1000);
       await art.animate([up, down], { duration: 700, easing: 'ease-in', fill: 'forwards' }).finished;
     } finally {

@@ -102,6 +102,11 @@
         overflow: hidden;
       }
 
+      /* Rests below the edge, so there's never a frame of him sitting up before he rises. */
+      .critter--bichon .critter__art {
+        transform: translateY(105%);
+      }
+
       .critter--bichon {
         right: 10%;
         bottom: 0;
